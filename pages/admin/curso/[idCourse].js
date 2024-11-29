@@ -53,7 +53,7 @@ const CourseItem = () => {
   useEffect (() => {
     axios ({
       method: 'GET',
-      url: API_URL+`/courses/611bfab35c1ada00165063be`
+      url: API_URL+`/courses/`+idCourse
     }).then (res =>{
       setCourse(res.data)
       setLoading(false)
