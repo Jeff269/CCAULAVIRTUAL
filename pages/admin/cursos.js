@@ -28,10 +28,11 @@ const Cursos = () => {
   useEffect (() => {
     axios ({
       method: 'GET',
-      url: API_URL+'/courses?_limit=1000000'
+      url: API_URL+'/courses?culminate=false'
     }).then (res =>{
       setCourses(res.data)
       setLoading(false)
+      console.log(res)
       }) 
     },[])
 
@@ -59,14 +60,14 @@ const Cursos = () => {
                           <Row className="align-items-center">
                             <div className="col">
                               <h6 className="text-uppercase text-muted ls-1 mb-1">
-                                Diplomado: {course.diplomat.name}
+                                Diplomado: {course.diplomat.name !== undefined ? course.diplomat.name : ''}
                               </h6>
                               <h3 className="mb-0">{course.name}</h3>
                             </div>
                           </Row>
                         </CardHeader>
                         <CardBody>
-                          {/* <img
+                          <img
                             style={{
                               display:'flex',
                               flexFlow: 'column-wrap',
@@ -75,10 +76,8 @@ const Cursos = () => {
                               justifyContent: 'center',
                               alignItems: 'center',
                             }}
-                            alt={course.photo.name}
-                            className=""
-                            src={`${course.photo.url}`}
-                          /> */}
+                            src='https://i0.wp.com/admision.utem.cl/wp-content/uploads/2020/11/cual-es-el-trabajo-de-un-ingeniero-comercial.jpg?w=1280&ssl=1' 
+                          />
                         </CardBody>
                       </Card>
                     </Col>
