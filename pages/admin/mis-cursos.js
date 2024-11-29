@@ -93,7 +93,7 @@ const MCursos = () => {
                               </Row>
                             </CardHeader>
                             <CardBody>
-                              {/* <img
+                              <img
                                 style={{
                                   display:'flex',
                                   flexFlow: 'column-wrap',
@@ -103,10 +103,9 @@ const MCursos = () => {
                                   alignItems: 'center',
                                   
                                 }}
-                                alt={course.course.photo.name}
                                 className=""
-                                src={`${course.course.photo.url}`}
-                              /> */}
+                                src='https://i0.wp.com/admision.utem.cl/wp-content/uploads/2020/11/cual-es-el-trabajo-de-un-ingeniero-comercial.jpg?w=1280&ssl=1' 
+                              />
                             </CardBody>
                             
                           </Card>
